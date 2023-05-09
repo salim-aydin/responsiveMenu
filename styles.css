@@ -1,0 +1,77 @@
+/*
+her şeyi css olarak açıklayacağım yorum satırlarıyla
+ */
+
+
+body {  /* body etiketi için */
+    margin: 0;  
+    font-family: Arial, sans-serif;  /* font ailesi */
+  }
+  
+  header {
+    display: flex;  /* flexbox */
+    justify-content: space-between;   /* aralarında boşluk bırak */
+    align-items: center;  /* dikeyde ortala */
+    padding: 20px;  /* padding */
+    background-color: #333; /* arkaplan rengi */
+  }
+  
+  .logo-container h1 { /* logo-container etiketi içindeki h1 etiketi için */
+    margin: 0; /* margin */
+    color: #fff; /* yazı rengi */
+  }
+  
+  .main-menu ul { /* main-menu etiketi içindeki ul etiketi için */
+    list-style-type: none; /* liste işaretlerini kaldır */
+    margin: 0; /* margin */
+    padding: 0; /* padding */
+    display: flex; /* flexbox */
+  }
+  
+  .main-menu li { /* main-menu etiketi içindeki li etiketi için */
+    margin-left: 65px;  /* margin */
+  }
+  
+  .main-menu a { /* main-menu etiketi içindeki a etiketi için */
+    text-decoration: none; /* alt çizgiyi kaldır */
+    color: #fff; /* yazı rengi */
+  }
+  
+  .hamburger-menu { /* hamburger-menu etiketi için */
+    display: none;  /* display: none; ile gizle */
+    flex-direction: column;  /* flexbox */
+    justify-content: space-around; /* aralarında boşluk bırak */
+    width: 30px; /* genişlik */
+    height: 20px; /* yükseklik */
+    cursor: pointer; /* imleç */ 
+  }
+  
+  .hamburger-menu span { /* hamburger-menu etiketi içindeki span etiketi için */
+    width: 100%; /* genişlik */
+    height: 3px;  /* yükseklik */
+    background-color: #fff; /* arkaplan rengi */
+  }
+  
+  .menu-items { /* menu-items etiketi için */
+    display: flex; /* flexbox */
+  }
+  
+  @media (max-width: 768px) { /* 768px'den küçük ekranlar için */
+    .main-menu .menu-items { /* main-menu etiketi içindeki menu-items etiketi için */
+      display: none; /* display: none; ile gizle */
+      flex-direction: column; /* flexbox */
+    }
+    .hamburger-menu { /* hamburger-menu etiketi için */
+      display: flex; /* flexbox */
+    }
+    .menu-items.active { /* menu-items etiketi içindeki active etiketi için */
+      display: flex; /* flexbox */
+      position: fixed; /* sabit konum */
+      top: 60px; /* üstten 60px */
+      left: 0; /* soldan 0px */
+      background-color: #333; /* arkaplan rengi */
+      width: 100%; /* genişlik */
+      z-index: 1; /* z-index */
+    }
+  }
+  
